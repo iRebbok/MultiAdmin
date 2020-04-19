@@ -429,6 +429,7 @@ namespace MultiAdmin
 				catch (Exception e)
 				{
 					Write(e.Message, ConsoleColor.Red);
+					Write($"Stacktrace:\n{e.StackTrace}", ConsoleColor.Red);
 					Program.LogDebugException(nameof(StartServer), e);
 
 					// If the server should try to start up again
